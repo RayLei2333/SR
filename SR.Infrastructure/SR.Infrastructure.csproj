@@ -92,13 +92,11 @@
   <ItemGroup>
     <Compile Include="AppConfig.cs" />
     <Compile Include="CacheHelper.cs" />
+    <Compile Include="IOC\Bootstrapper.cs" />
+    <Compile Include="IOC\ObjectFactory.cs" />
     <Compile Include="JsonHelper.cs" />
     <Compile Include="LogService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

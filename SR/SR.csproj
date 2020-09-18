@@ -114,9 +114,25 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SR.Business.Imp\SR.Business.Imp.csproj">
+      <Project>{f032bdd0-95c1-4050-add3-642588087e77}</Project>
+      <Name>SR.Business.Imp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.Business\SR.Business.csproj">
+      <Project>{438bc4c7-9f54-4fea-ae7d-399f482d505b}</Project>
+      <Name>SR.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SR.Infrastructure\SR.Infrastructure.csproj">
       <Project>{363b8d3b-2115-472c-94e6-6b4945878215}</Project>
       <Name>SR.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.Model\SR.Model.csproj">
+      <Project>{7b721dff-fd24-4444-9c5f-793e7b564f02}</Project>
+      <Name>SR.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.Respository\SR.Respository.csproj">
+      <Project>{991508fc-67de-4a08-855d-7b4096529c1a}</Project>
+      <Name>SR.Respository</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
