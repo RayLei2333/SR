@@ -42,11 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeChatService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SR.Business\SR.Business.csproj">
       <Project>{438bc4c7-9f54-4fea-ae7d-399f482d505b}</Project>
       <Name>SR.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.Infrastructure\SR.Infrastructure.csproj">
+      <Project>{363B8D3B-2115-472C-94E6-6B4945878215}</Project>
+      <Name>SR.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\SR.Model\SR.Model.csproj">
       <Project>{7b721dff-fd24-4444-9c5f-793e7b564f02}</Project>
@@ -55,6 +60,10 @@
     <ProjectReference Include="..\SR.Respository\SR.Respository.csproj">
       <Project>{991508fc-67de-4a08-855d-7b4096529c1a}</Project>
       <Name>SR.Respository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.WeCHat\SR.WeChat.csproj">
+      <Project>{0c570bb5-fb3f-4e5d-bb08-847ef4869f00}</Project>
+      <Name>SR.WeChat</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{438BC4C7-9F54-4FEA-AE7D-399F482D505B}</ProjectGuid>
+    <ProjectGuid>{0C570BB5-FB3F-4E5D-BB08-847EF4869F00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SR.Business</RootNamespace>
-    <AssemblyName>SR.Business</AssemblyName>
+    <RootNamespace>SR.WeChat</RootNamespace>
+    <AssemblyName>SR.WeChat</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,22 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IWeChatService.cs" />
+    <Compile Include="CodeResult.cs" />
+    <Compile Include="CorpUserListResult.cs" />
+    <Compile Include="CorpUserService.cs" />
+    <Compile Include="DepartmentResult.cs" />
+    <Compile Include="DepartmentService.cs" />
+    <Compile Include="NetWork\Get.cs" />
+    <Compile Include="NetWork\Post.cs" />
+    <Compile Include="NetWork\WXApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SR.Infrastructure\SR.Infrastructure.csproj">
-      <Project>{363b8d3b-2115-472c-94e6-6b4945878215}</Project>
-      <Name>SR.Infrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SR.Model\SR.Model.csproj">
-      <Project>{7b721dff-fd24-4444-9c5f-793e7b564f02}</Project>
-      <Name>SR.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SR.WeCHat\SR.WeChat.csproj">
-      <Project>{0c570bb5-fb3f-4e5d-bb08-847ef4869f00}</Project>
-      <Name>SR.WeChat</Name>
-    </ProjectReference>
+    <Compile Include="SerializerHelper.cs" />
+    <Compile Include="TokenResult.cs" />
+    <Compile Include="TokenService.cs" />
+    <Compile Include="WeChatResult.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR.Business.Imp", "SR.Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR.Respository", "SR.Respository\SR.Respository.csproj", "{991508FC-67DE-4A08-855D-7B4096529C1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR.DTO", "SR.DTO\SR.DTO.csproj", "{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR.WeChat", "SR.WeCHat\SR.WeChat.csproj", "{0C570BB5-FB3F-4E5D-BB08-847EF4869F00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{991508FC-67DE-4A08-855D-7B4096529C1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{991508FC-67DE-4A08-855D-7B4096529C1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{991508FC-67DE-4A08-855D-7B4096529C1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C570BB5-FB3F-4E5D-BB08-847EF4869F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C570BB5-FB3F-4E5D-BB08-847EF4869F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C570BB5-FB3F-4E5D-BB08-847EF4869F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C570BB5-FB3F-4E5D-BB08-847EF4869F00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -92,7 +92,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\ErrorFilter.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MobileAuthAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MobileController.cs" />
+    <Compile Include="Controllers\WeChatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -110,8 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Mobile\" />
+    <Folder Include="Views\WeChat\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SR.Business.Imp\SR.Business.Imp.csproj">
@@ -121,6 +129,10 @@
     <ProjectReference Include="..\SR.Business\SR.Business.csproj">
       <Project>{438bc4c7-9f54-4fea-ae7d-399f482d505b}</Project>
       <Name>SR.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.DTO\SR.DTO.csproj">
+      <Project>{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}</Project>
+      <Name>SR.DTO</Name>
     </ProjectReference>
     <ProjectReference Include="..\SR.Infrastructure\SR.Infrastructure.csproj">
       <Project>{363b8d3b-2115-472c-94e6-6b4945878215}</Project>
@@ -133,6 +145,10 @@
     <ProjectReference Include="..\SR.Respository\SR.Respository.csproj">
       <Project>{991508fc-67de-4a08-855d-7b4096529c1a}</Project>
       <Name>SR.Respository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SR.WeCHat\SR.WeChat.csproj">
+      <Project>{0c570bb5-fb3f-4e5d-bb08-847ef4869f00}</Project>
+      <Name>SR.WeChat</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

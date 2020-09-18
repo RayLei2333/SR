@@ -1,14 +1,13 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SR.Infrastructure
+namespace SR.WeChat
 {
-    public static class JsonHelper
+    internal static class SerializerHelper
     {
         public static string ToJson(object data, string timeFormat = "yyyy-MM-dd HH:mm:ss", bool camelCase = true)
         {
@@ -22,7 +21,7 @@ namespace SR.Infrastructure
             };
             if (camelCase)
                 settings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
-            return JsonConvert.SerializeObject(data,settings);
+            return JsonConvert.SerializeObject(data, settings);
         }
 
         public static T ToObject<T>(string json) where T : class

@@ -7,18 +7,18 @@ namespace SR.Infrastructure.IOC
 {
     public class Bootstrapper
     {
-        public static void SetAutofacWebAPI()
+        public static void Register()
         {
             var builder = new ContainerBuilder();
 
             Assembly[] controllers = new Assembly[] {
-                Assembly.Load("HARSON.API")
+                Assembly.Load("SR")
             };
             builder.RegisterControllers(controllers);
 
             builder.RegisterAssemblyTypes(new Assembly[] {
-                Assembly.Load("HARSON.Business"),
-                Assembly.Load("HARSON.Business.Imp")
+                Assembly.Load("SR.Business"),
+                Assembly.Load("SR.Business.Imp")
             }).AsImplementedInterfaces();
 
             var container = builder.Build();
