@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tiger.ORM.ModelConfiguration;
 
 namespace SR.Model
 {
     public class T_Article_Signed
     {
+        [Key(KeyType.GUID)]
         public string Id { get; set; }
 
         public string ArticleId { get; set; }

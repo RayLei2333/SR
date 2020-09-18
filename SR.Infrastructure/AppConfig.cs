@@ -5,6 +5,14 @@ namespace SR.Infrastructure
     public static class AppConfig
     {
 
+        public static string DB
+        {
+            get
+            {
+                return ConfigurationManager.ConnectionStrings["SR"].ConnectionString;
+            }
+        }
+
         /// <summary>
         /// Get appSettings
         /// </summary>
@@ -14,12 +22,6 @@ namespace SR.Infrastructure
         {
             string result = ConfigurationManager.AppSettings.Get(key);
             return result;
-        }
-
-        public static string GetConnectionString(string name)
-        {
-            string connstr = ConfigurationManager.ConnectionStrings[name].ConnectionString;
-            return connstr;
         }
     }
 }

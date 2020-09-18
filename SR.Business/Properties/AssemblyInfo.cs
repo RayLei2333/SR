@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("SR.Service")]
+[assembly: AssemblyTitle("SR.Business")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SR.Service")]
+[assembly: AssemblyProduct("SR.Business")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("c72e03b7-df1b-4c59-9f82-c6b73a1b7828")]
+[assembly: Guid("438bc4c7-9f54-4fea-ae7d-399f482d505b")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
