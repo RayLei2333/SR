@@ -15,9 +15,7 @@ namespace SR.App_Start
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             if(CacheHelper.GetSession("mobileUser") == null)
-            {
                 return false;
-            }
             return true;
         }
 

@@ -14,15 +14,25 @@ namespace SR.Model
 
         public string UserId { get; set; }
 
+        public string OpenUserId { get; set; }
+
         public string Name { get; set; }
 
-        public string Gender { get; set; }
+        public string Position { get; set; }
 
         public string Mobile { get; set; }
+
+        public int Gender { get; set; }
+
+        public string Email { get; set; }
 
         public string Department { get; set; }
 
         public string Alias { get; set; }
+
+        public string EnglishName { get; set; }
+
+        public int Status { get; set; }
 
         public DateTime CreateTime { get; set; }
 

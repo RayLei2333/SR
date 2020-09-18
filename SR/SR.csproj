@@ -96,7 +96,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\MobileAuthAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ArticleAPIController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MobileController.cs" />
     <Compile Include="Controllers\WeChatController.cs" />
     <Compile Include="Global.asax.cs">
@@ -117,7 +119,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Article\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\Login\" />
     <Folder Include="Views\Mobile\" />
     <Folder Include="Views\WeChat\" />
   </ItemGroup>

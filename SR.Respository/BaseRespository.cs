@@ -10,6 +10,9 @@ using Tiger.ORM;
 
 namespace SR.Respository
 {
+    /// <summary>
+    /// 数据库底层服务
+    /// </summary>
     public class BaseRespository : DbContext
     {
         public BaseRespository() : base(new SqlConnection(AppConfig.DB))

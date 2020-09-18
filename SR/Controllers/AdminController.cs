@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace SR.Controllers
 {
-    public class HomeController : Controller
+    public class AdminController : Controller
     {
-        // GET: Home
+        // GET: Admin
         public ActionResult Index()
         {
-            throw new Exception("这是一个错误的控制器");
             return View();
         }
     }

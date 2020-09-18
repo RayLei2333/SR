@@ -2,6 +2,12 @@
 
 namespace SR.Infrastructure
 {
+    /// <summary>
+    /// Session、Application缓存设置
+    /// Session缓存当浏览器关闭时则清除
+    /// Application缓存当IIS站点停止时清除
+    /// 还有Reids MemCache 等缓存插件
+    /// </summary>
     public static class CacheHelper
     {
         public static void SetAppliation(string key, object data)

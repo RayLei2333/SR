@@ -1,0 +1,14 @@
+﻿using SR.WeChat;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SR.Business
+{
+    public interface IWeChatUserService
+    {
+        bool NotfoundOrAddUser(CorpUserResult wechatUser);
+    }
+}

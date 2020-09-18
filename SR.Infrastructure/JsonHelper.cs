@@ -8,8 +8,18 @@ using System.Threading.Tasks;
 
 namespace SR.Infrastructure
 {
+    /// <summary>
+    /// Json数据化
+    /// </summary>
     public static class JsonHelper
     {
+        /// <summary>
+        /// 对象转为json
+        /// </summary>
+        /// <param name="data">数据对象</param>
+        /// <param name="timeFormat">日期格式化</param>
+        /// <param name="camelCase">是否启用驼峰命名</param>
+        /// <returns></returns>
         public static string ToJson(object data, string timeFormat = "yyyy-MM-dd HH:mm:ss", bool camelCase = true)
         {
             //IsoDateTimeConverter timeConverter = new IsoDateTimeConverter();

@@ -9,8 +9,15 @@ using System.Web.Routing;
 
 namespace SR
 {
+    /// <summary>
+    /// 程序入口
+    /// </summary>
     public class MvcApplication : System.Web.HttpApplication
     {
+        /// <summary>
+        /// 当程序被启动时云心这个方法，
+        /// 根据IIS站点启动运行，全局只运行一次
+        /// </summary>
         protected void Application_Start()
         {
             //注册area

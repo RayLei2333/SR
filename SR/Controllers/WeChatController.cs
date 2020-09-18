@@ -10,6 +10,11 @@ using System.Web.Mvc;
 
 namespace SR.Controllers
 {
+    /**
+     * 业务
+     * 1、处理微信网页授权
+     * 2、处理微信JSSDK分享
+     * **/
     public class WeChatController : Controller
     {
 
@@ -30,6 +35,12 @@ namespace SR.Controllers
             CorpUserResult userInfo = service.GetUserInfo(codeResult.UserId);
             if (userInfo.errcode != 0)
                 return View();  //获取用户信息失败
+            if (userInfo.status == 2 || userInfo.status == 5)
+                return View();  //已禁用状态 和  退出企业状态无法访问
+            IWeChatUserService userService = ObjectFactory.GetObject<IWeChatUserService>();
+            bool checkUserResult = userService.NotfoundOrAddUser(userInfo);
+            if (!checkUserResult)
+                return View();  //增添用户信息出错
             CacheHelper.SetSession("mobileUser", userInfo);
             return Redirect(redirectUrl);
         }
