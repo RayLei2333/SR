@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,11 +50,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleResp.cs" />
     <Compile Include="BaseRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserResp.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SR.DTO\SR.DTO.csproj">
+      <Project>{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}</Project>
+      <Name>SR.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SR.Infrastructure\SR.Infrastructure.csproj">
       <Project>{363B8D3B-2115-472C-94E6-6B4945878215}</Project>
       <Name>SR.Infrastructure</Name>
@@ -60,6 +68,10 @@
       <Project>{7b721dff-fd24-4444-9c5f-793e7b564f02}</Project>
       <Name>SR.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

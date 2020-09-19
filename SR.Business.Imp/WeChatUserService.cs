@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SR.DTO;
 using SR.Infrastructure;
 using SR.Model;
 using SR.Respository;
@@ -12,6 +13,18 @@ namespace SR.Business.Imp
 {
     public class WeChatUserService : IWeChatUserService
     {
+
+        public ResponseModel Login(string userName, string pwd)
+        {
+            using (UserResp resp = new UserResp())
+            {
+                T_Sys_User user = resp.GetSystemUser(userName, pwd);
+                if (user == null)
+                    return new ResponseModel(10017, "");
+                CacheHelper.SetSession(CacheKey.PCUserSeesion, user);
+                return new ResponseModel();
+            }
+        }
 
         public bool NotfoundOrAddUser(CorpUserResult wechatUser)
         {
@@ -41,6 +54,7 @@ namespace SR.Business.Imp
                 Mobile = corpUser.mobile,
                 Gender = corpUser.gender,
                 Email = corpUser.email,
+                HeaderImg = corpUser.avatar,
                 //Department = corpUser.de
                 Alias = corpUser.alias,
                 EnglishName = corpUser.english_name,
@@ -49,6 +63,27 @@ namespace SR.Business.Imp
                 UpdateTime = DateTime.Now
             };
             return user;
+        }
+
+
+        public void GetSignNotSignedUser(string articleId)
+        {
+
+        }
+
+        public ResponseModel GetUserLv()
+        {
+            using (UserResp resp = new UserResp())
+            {
+                CorpUserResult user = CacheHelper.GetSession<CorpUserResult>(CacheKey.MobileUserSession);
+                int count = resp.GetUserSignedNumber(user.open_userid);
+
+                int zuan = Convert.ToInt32(count / 25);
+                int hua = Convert.ToInt32((count - (zuan * 25)) / 5);
+                int cao = count - (zuan * 25) - hua * 5;
+
+                return new ResponseModel(new { zuan, cao, hua });
+            }
         }
     }
 }

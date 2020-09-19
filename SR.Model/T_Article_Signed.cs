@@ -18,6 +18,10 @@ namespace SR.Model
 
         public string UserId { get; set; }
 
+        public bool IsAdminSigned { get; set; }
+
+        public bool IsDelete { get; set; }
+
         public DateTime CreateTime { get; set; }
 
         public DateTime UpdateTime { get; set; }

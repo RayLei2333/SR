@@ -18,6 +18,8 @@ namespace SR.Model
 
         public string Name { get; set; }
 
+        public string HeaderImg { get; set; }
+
         public string Position { get; set; }
 
         public string Mobile { get; set; }

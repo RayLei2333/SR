@@ -47,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SR.DTO\SR.DTO.csproj">
+      <Project>{7CFE1AC8-F67C-4019-ADEA-FDD030D83758}</Project>
+      <Name>SR.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SR.Infrastructure\SR.Infrastructure.csproj">
       <Project>{363b8d3b-2115-472c-94e6-6b4945878215}</Project>
       <Name>SR.Infrastructure</Name>

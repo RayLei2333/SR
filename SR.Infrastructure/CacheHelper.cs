@@ -53,4 +53,11 @@ namespace SR.Infrastructure
             System.Web.HttpContext.Current.Session.Remove(key);
         }
     }
+
+    public static class CacheKey
+    {
+        public static string MobileUserSession { get { return "mobileUser"; } }
+
+        public static string PCUserSeesion { get { return "PCUser";  } }
+    }
 }

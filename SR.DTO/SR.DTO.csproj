@@ -42,7 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Req\ArticleQuery.cs" />
     <Compile Include="ResponseModel.cs" />
+    <Compile Include="Resp\ArticleCommentDTO.cs" />
+    <Compile Include="Resp\ArticleDetailResp.cs" />
+    <Compile Include="Resp\ArticleDTO.cs" />
+    <Compile Include="Resp\UserSignArticleQuery.cs" />
+    <Compile Include="Resp\UserSignDTO.cs" />
+    <Compile Include="Resp\UserSignQuery.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SR.Model\SR.Model.csproj">
+      <Project>{7B721DFF-FD24-4444-9C5F-793E7B564F02}</Project>
+      <Name>SR.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@ namespace SR.App_Start
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             //同理session[""]
-            if (CacheHelper.GetSession("pcUser") == null)
+            if (CacheHelper.GetSession(CacheKey.PCUserSeesion) == null)
                 return false;
             return true;
         }

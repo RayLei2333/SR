@@ -1,4 +1,5 @@
-﻿using SR.WeChat;
+﻿using SR.DTO;
+using SR.WeChat;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace SR.Business
 {
     public interface IWeChatUserService
     {
+        ResponseModel Login(string userName, string pwd);
+
         bool NotfoundOrAddUser(CorpUserResult wechatUser);
+
+        ResponseModel GetUserLv();
     }
 }
